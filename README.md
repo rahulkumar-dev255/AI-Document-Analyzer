@@ -23,3 +23,17 @@ Access the live application here: [AI Document Analyzer](https://ai-document-ana
    ```bash
    git clone [https://github.com/rahulkumar-dev255/AI-Document-Analyzer.git](https://github.com/rahulkumar-dev255/AI-Document-Analyzer.git)
 # AI-Document-Analyzer
+
+2. Install dependencies:
+   
+   pip install -r requirements.txt
+   
+  
+ 3. Run the application:
+   
+   streamlit run app.py
+   
+   
+Built with ❤️ by Rahul Kumar
+
+
