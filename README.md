@@ -3,7 +3,7 @@
 An intelligent AI-powered agent designed to automate the analysis of complex PDF documents. This project streamlines the extraction of critical information from RFPs, contracts, and project documents, significantly reducing manual reading time.
 
 ## 🌟 Key Features
-- **Automated Intelligence:** Uses Google Gemini API (2.0 Flash) to instantly extract Eligibility Criteria, Project Scope, Timeline, Payment Terms, and more.
+- **Automated Intelligence:** Uses Google Gemini API (2.5 Flash) to instantly extract Eligibility Criteria, Project Scope, Timeline, Payment Terms, and more.
 - **Structured Reports:** Converts unstructured PDF data into organized, professional-grade reports.
 - **Instant PDF Export:** Features a built-in PDF generator allowing users to download analysis reports instantly.
 - **Modern UI:** Clean, intuitive interface built with Streamlit for a seamless user experience.
