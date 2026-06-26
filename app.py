@@ -2,6 +2,8 @@ import streamlit as st
 import PyPDF2
 from google import genai
 from fpdf import FPDF
+import os
+
 
 # PDF banane ka function
 def create_pdf(text):
@@ -12,8 +14,10 @@ def create_pdf(text):
     pdf.multi_cell(0, 10, txt=text.encode('latin-1', 'replace').decode('latin-1'))
     return pdf.output(dest='S').encode('latin-1')
 
-# Nayi library ka client
-client = genai.Client(api_key="AQ.Ab8RN6IZPj044f_qrvuvNKMPyfqmwkep5r91_fJXzmD37YVwhQ")
+
+api_key = st.secrets["GOOGLE_API_KEY"]
+client = genai.Client(api_key=api_key)
+
 
 st.title("AI Document Analyzer")
 
@@ -48,23 +52,4 @@ if uploaded_file is not None:
         except Exception as e:
             st.error(f"Error: {e}")    
     
-    # if st.button("Analyze Karo"):
-    #     with st.spinner("AI analyze kar raha hai..."):
-    #         try:
-    #             # Sahi model name (gemini-3.5-flash)
-    #             response = client.models.generate_content(
-    #                 model="gemini-2.5-flash",
-    #                 contents=f"You are an expert. Extract Imprtant points   from this text. ANSWER IN ENGLISH ONLY. Document text: {text}"
-    #             )
-    #             analysis_text =  response.text
-    #             st.markdown("Analysis Report:")
-    #             # st.markdown(response.text)
-    #             # st.sidebar
-    #             st.markdown(analysis_text)
-    #             st.success("Analysis complete!")
-
-    #         except Exception as e:
-    #             st.error(f"Error: {e}")
-
-    #             # st.download_button("Download Report", response.text, file_name="analysis.txt")
-    #             st.download_button("Download Report", response.text, file_name="analysis.txt")
+   
