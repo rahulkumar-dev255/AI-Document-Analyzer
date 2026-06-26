@@ -15,7 +15,7 @@ def create_pdf(text):
     return pdf.output(dest='S').encode('latin-1')
 
 
-api_key = st.secrets["GOOGLE_API_KEY"]
+api_key = st.secrets["CREATED_API_KEY"]
 client = genai.Client(api_key=api_key)
 
 
